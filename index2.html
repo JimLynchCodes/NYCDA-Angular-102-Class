@@ -1,0 +1,71 @@
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <link rel="stylesheet" type='text/css' href="css/fuck.css"></link>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="MyApp">
+<div ng-controller="MainController as mainCtrl">
+
+
+
+    <h3>ng-class object!</h3>
+    <input type="checkbox" ng-model="mainCtrl.classObject.red">Red
+    <input type="checkbox" ng-model="mainCtrl.classObject.green">Green
+    <input type="checkbox" ng-model="mainCtrl.classObject.yellow">Yellow
+
+    <div ng-click="onButtonClick()" ng-class="mainCtrl.classObject">
+        HMMMMMMMMMM
+    </div>
+
+
+    <!--<h3>ng-class string</h3>-->
+    <!--<input type="text" ng-model='mainCtrl.userText'>-->
+    <!--<div ng-class='mainCtrl.userText'>-->
+        <!--JSDKJAKSJDKAJSDKAJSDK-->
+    <!--</div>-->
+
+
+
+    <!--<div ng-show='mainCtrl.shouldShow' style='color:red'>-->
+        <!--:LSLDLSASFLLASDFLALSDFLASLDF-->
+    <!--</div>-->
+    <!--<button ng-click="mainCtrl.onButtonClick()">Click me :)</button>-->
+    <!--<input type='checkbox' ng-model='mainCtrl.shouldShow' />-->
+
+
+
+
+    <!--<h3>Checkbox ng-model</h3>-->
+    <!--<h3 ng-bind="ctrl.select"></h3>-->
+    <!--<input type="checkbox" ng-model="ctrl.select">Select-->
+
+    <!--<h3> Radio ng-model><h3>-->
+        <!--<h3 ng-bind="ctrl.animalSelected"></h3>-->
+        <!--<input type="radio"-->
+               <!--name='animal'-->
+               <!--ng-value='mainCtrl.myDog'-->
+               <!--ng-model='mainCtrl.animalSelected'>Dog-->
+        <!--<input type="radio"-->
+               <!--name='animal'-->
+               <!--value='Cat'-->
+               <!--ng-model='mainCtrl.animalSelected'>Cat-->
+        <!--<input type="radio"-->
+               <!--name='animal'-->
+               <!--value='Cow'-->
+               <!--ng-model='mainCtrl.animalSelected'>Cow-->
+
+        <!--
+
+                <h3>
+                <h3 ng-bind="mainCtrl.username"></h3>
+                <input type='text' ng-model='mainCtrl.user.name'/>
+
+                <h3>{{undefined}}</h3> -->
+
+</div>
+</body>
+</html>

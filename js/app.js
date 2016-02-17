@@ -42,9 +42,28 @@ angular.module('MyApp', [])
 
         };
 
+        self.expandAll = function() {
+            for (var i=0; i < self.folders.length; i++)
+            {
+                self.folders[i].expanded = true;
+            }
+        };
+
+        self.collapseAll = function() {
+            for (var i=0; i < self.folders.length; i++)
+            {
+                self.folders[i].expanded = false;
+            }
+        };
+
+        self.folderClicked = function(folderClicked) {
+            folderClicked.expanded = !folderClicked.expanded;
+        };
+
         self.folders = [
             {
                 name:"first folder",
+                expanded:false,
                 items: [
                     {
                         name: "First item"
@@ -57,6 +76,7 @@ angular.module('MyApp', [])
             },
             {
                 name:"second folder",
+                expanded:false,
                 items: [
                     {
                         name: "First item"

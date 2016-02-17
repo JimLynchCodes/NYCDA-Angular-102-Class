@@ -36,15 +36,15 @@
     <input type="checkbox" ng-click="mainCtrl.noneCheckBoxClicked()" ng-model="mainCtrl.isNoneSelected">None
 
 
-    <div ng-click="onButtonClick()" ng-model="mainCtrl.classObject.yellow" ng-class="mainCtrl.classObject">
+    <div ng-click="mainCtrl.onButtonClick()" ng-model="mainCtrl.classObject.yellow" ng-class="mainCtrl.classObject">
         HMMMMMMMMMM
     </div>
 
     <hr/>
 
-    <span ng-repeat="folder in mainCtrl.folders">
+    <span ng-repeat="folder in mainCtrl.folders" ng-click="mainCtrl.folderClicked(folder)">
         Hello {{folder.name}}<br/>
-        <div ng-repeat="item in folder.items">
+        <div ng-repeat="item in folder.items" ng-show="folder.expanded">
             &nbsp&nbsp&nbsp&nbsp&nbspItem is {{item.name}}<br/>
         </div>
     </span>
@@ -63,6 +63,8 @@
            ng-model="folderOrItemRadioButton"
            value="item"> Create New Item.
 
+    <button ng-click="mainCtrl.expandAll()">Expand All</button>
+    <button ng-click="mainCtrl.collapseAll()">Collapse All</button>
 
 
 

@@ -16,7 +16,11 @@ angular.module('MyApp', [])
             self.isNoneSelected = false;
         }
 
-        self.classObject = self.allFalseObject;
+        self.currentTextClass = {};
+        self.currentContainerClass = {};
+        self.currentContainersContainerClass = {};
+
+
 
         self.noneCheckBoxClicked = function() {
 

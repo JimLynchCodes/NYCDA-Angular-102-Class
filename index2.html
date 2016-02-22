@@ -28,18 +28,29 @@
         <!--ajsd bfmajhbsd jfabmsdhjbf amdhjsbf mahsbdfmh b.</p>-->
     <!--</div>-->
 
+    <!-- way of using one ng-class, using multiple ng-classes -->
+
     <h3>ng-class object!</h3>
-    <input type="checkbox" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.red">Red
-    <input type="checkbox" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.blue">Blue
-    <input type="checkbox" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.green">Green
-    <input type="checkbox" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.yellow">Yellow
-    <input type="checkbox" ng-click="mainCtrl.noneCheckBoxClicked()" ng-model="mainCtrl.isNoneSelected">None
+    <input type="radio" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.red mainCtrl.containerClassObject.red">Red
+    <input type="radio" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.blue">Blue
+    <input type="radio" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.green">Green
+    <input type="radio" ng-click="mainCtrl.deselectNoneCheckbox()" ng-model="mainCtrl.classObject.yellow">Yellow
+    <input type="radio" ng-click="mainCtrl.noneCheckBoxClicked()" ng-model="mainCtrl.isNoneSelected">None
 
 
     <div ng-click="mainCtrl.onButtonClick()" ng-model="mainCtrl.classObject.yellow" ng-class="mainCtrl.classObject">
-        HMMMMMMMMMM
-    </div>
 
+        <div class="mainCtrl.currentContainersContainerClass">
+            <br/>
+        <div class="mainCtrl.currentContainerClass">
+            <br/>
+            <span ng-class="mainCtrl.currentTextClass">Some sample text.</span>
+            <br/>
+        </div>
+            <br/>
+
+        </div>
+</div>
     <hr/>
 
     <span ng-repeat="folder in mainCtrl.folders" ng-click="mainCtrl.folderClicked(folder)">

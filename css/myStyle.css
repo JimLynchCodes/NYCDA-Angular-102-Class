@@ -10,8 +10,45 @@
     color:yellow;
 }
 
-.blue {
+.blue-bg {
     color:blue;
+    background-color: blue;
+}
+
+
+
+#outer-container .red {
+    background-color: indianred;
+}
+
+#inner-container .red {
+    background-color: darkred;
+}
+
+#outer-container .blue {
+    background-color: dodgerblue;
+}
+
+#inner-container .blue {
+    background-color: deepskyblue;
+}
+
+
+
+
+
+
+
+.blue #container {
+    background-color: blue;
+}
+
+.blue #currentContainersContainerClass {
+    background-color: lightblue;
+}
+
+ #jim-container {
+    background-color: cornflowerblue;
 }
 
 .container {
@@ -19,6 +56,6 @@
     width: 160px;
 }
 
-.constainers-container {
+.containers-container {
     background: red;
 }

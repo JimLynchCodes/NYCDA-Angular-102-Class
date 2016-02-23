@@ -12,20 +12,12 @@ angular.module('MyApp', [])
             yellow:false
         };
 
-        self.deselectNoneCheckbox = function() {
-            self.isNoneSelected = false;
-        }
-
-        self.currentTextClass = {};
-        self.currentContainerClass = {};
-        self.currentContainersContainerClass = {};
-
-
 
         self.noneCheckBoxClicked = function() {
 
             console.log("none clicked");
-            self.classObject = { red:false,
+            self.classObject = {
+                red:false,
                 blue:false,
                 green:false,
                 yellow:false}

@@ -1,0 +1,59 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color:yellow;
+}
+
+.blue {
+    color:blue;
+}
+
+#outer-container {
+    max-width: 200px;
+    text-align: center;
+    margin-inside: 30px;
+}
+
+#outer-container .red {
+    background-color: darkred;
+}
+
+#outer-container .green {
+    background-color: darkgreen;
+}
+
+#outer-container .yellow {
+    background-color: yellow;
+}
+
+#outer-container .blue {
+    background-color: darkblue;
+}
+
+#inner-container {
+    /* Why doesn't this make the inner container bigger? */
+    padding: 30px;
+}
+
+#inner-container .red {
+    background-color: mediumvioletred;
+}
+
+#inner-container .green {
+    background-color: greenyellow;
+}
+
+#inner-container .yellow {
+    background-color: darkgoldenrod;
+}
+
+#inner-container .blue {
+    background-color: deepskyblue;
+}
+

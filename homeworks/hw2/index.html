@@ -1,0 +1,50 @@
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <link rel="stylesheet" type='text/css' href="css/myStyle.css"/>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="MyApp">
+    <div ng-controller="MainController as mainCtrl">
+
+        <h3>Homework 1! <br/>by Jim Lynch</h3>
+        <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="red">Red
+        <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="blue">Blue
+        <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="green">Green
+        <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="yellow">Yellow
+        <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="none">None
+
+
+        <div id="outer-container" class="{{mainCtrl.currentColorTheme}}">
+            <br/>
+            <div id="inner-container" class="{{mainCtrl.currentColorTheme}}">
+                <br/>
+                <span class="{{mainCtrl.currentColorTheme}}">Some sample text.</span>
+                <br/>
+                <br/>
+            </div>
+        </div>
+
+        <hr/>
+
+        <span ng-repeat="folder in mainCtrl.folders">
+            <input type="radio" name="folderChoice" ng-value="folder" ng-model="mainCtrl.currentFolder">
+            <span ng-click="mainCtrl.folderClicked(folder)"> {{folder.name}}</span> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <div ng-repeat="item in folder.items" ng-show="folder.expanded">
+                &nbsp&nbsp&nbsp&nbsp&nbspItem is {{item.name}}<br/>
+            </div>
+            <br/>
+        </span>
+
+        <input type="input" ng-model="mainCtrl.currentInputText">
+
+        <button ng-click="mainCtrl.createItemButtonClicked()">Create Item</button>
+        <button ng-click="mainCtrl.expandAll()">Expand All</button>
+        <button ng-click="mainCtrl.collapseAll()">Collapse All</button>
+
+    </div>
+</body>
+</html>

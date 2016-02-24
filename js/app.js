@@ -3,16 +3,6 @@ angular.module('MyApp', [])
     .controller('MainController', function($scope) {
         var self = this;
 
-        self.folderOrItemRadioButton = "folder";
-
-        self.allFalseObject = {
-            red:false,
-            blue:false,
-            green:false,
-            yellow:false
-        };
-
-
         self.noneCheckBoxClicked = function() {
 
             console.log("none clicked");
@@ -23,7 +13,7 @@ angular.module('MyApp', [])
                 yellow:false}
         };
 
-        self.submitButtonClicked = function() {
+        self.createItemButtonClicked = function() {
             console.log("the input text is " + self.currentInputText);
 
             var newItem = {
@@ -31,8 +21,9 @@ angular.module('MyApp', [])
                 items: []
             };
 
-            self.folders.push(newItem);
+            self.currentFolder.items.push(newItem);
 
+            console.log("items in 1: " + self.folders[0].items);
             console.log(self);
             console.log(this);
 
@@ -88,7 +79,3 @@ angular.module('MyApp', [])
 
 
     });
-
-/**
- * Created by bobolicious3000 on 2/15/16.
- */

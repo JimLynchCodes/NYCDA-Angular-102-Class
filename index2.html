@@ -11,31 +11,13 @@
 <div ng-controller="MainController as mainCtrl">
 
 
-    <!--<span>-->
 
-    <!--<input type="checkbox" ng-model="mainCtrl.classObject.red">Red-->
-        <!--<input type="checkbox" ng-model="mainCtrl.classObject.blue">Blue-->
-        <!--<input type="checkbox" ng-model="mainCtrl.classObject.yellow">Yellow-->
-        <!--<input type="checkbox" value="">None-->
-
-    <!--</span>-->
-
-    <!--<div ng-class="mainCtrl.classObject">-->
-        <!--<h2>Something</h2>-->
-        <!--<p>sdhfk nskjdn kjbhdsk bfkjhsdb kjahbsdk jbfaksdjhbf-->
-        <!--ajshdbfajhsdb abjd hbaj bdsjfb amjsdhb fmjahbsdm h-->
-        <!--aj bdf,ashbd mfjabhsmdbf amdhjsb fmajhbds afh-->
-        <!--ajsd bfmajhbsd jfabmsdhjbf amdhjsbf mahsbdfmh b.</p>-->
-    <!--</div>-->
-
-    <!-- way of using one ng-class, using multiple ng-classes -->
-
-    <h3>ng-class object!</h3>
+    <h3>Homework 1! <br/>by Jim Lynch</h3>
     <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="red">Red
     <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="blue">Blue
-    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="mainCtrl.classObject.green">Green
-    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="mainCtrl.classObject.yellow">Yellow
-    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="mainCtrl.isNoneSelected">None
+    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="green">Green
+    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="yellow">Yellow
+    <input type="radio" name="colors" ng-model="mainCtrl.currentColorTheme" value="none">None
 
 
     <div id="outer-container" class="{{mainCtrl.currentColorTheme}}">
@@ -51,29 +33,26 @@
 
     <hr/>
 
-    <span ng-repeat="folder in mainCtrl.folders" ng-click="mainCtrl.folderClicked(folder)">
-        Hello {{folder.name}}<br/>
+    <span ng-repeat="folder in mainCtrl.folders">
+        <input type="radio" name="folderChoice" ng-value="folder" ng-model="mainCtrl.currentFolder">
+        <span ng-click="mainCtrl.folderClicked(folder)"> {{folder.name}}</span> &nbsp&nbsp&nbsp&nbsp&nbsp
         <div ng-repeat="item in folder.items" ng-show="folder.expanded">
             &nbsp&nbsp&nbsp&nbsp&nbspItem is {{item.name}}<br/>
         </div>
+        <br/>
     </span>
 
     <input type="input" ng-model="mainCtrl.currentInputText">
-    <button ng-click="mainCtrl.submitButtonClicked()">Submit</button>
+    <button ng-click="mainCtrl.createItemButtonClicked()">Create Item</button>
 
-    <input type="radio"
-           name="radioGroup"
-           ng-model="folderOrItemRadioButton"
-           id="id1"
-           value="folder" checked> Create New Folder.
-    <input type="radio"
-           name="radioGroup"
-           id="id2"
-           ng-model="folderOrItemRadioButton"
-           value="item"> Create New Item.
+
 
     <button ng-click="mainCtrl.expandAll()">Expand All</button>
     <button ng-click="mainCtrl.collapseAll()">Collapse All</button>
+
+    <div >
+
+    </div>
 
 
 

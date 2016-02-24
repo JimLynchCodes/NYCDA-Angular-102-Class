@@ -1,2 +1,4 @@
-# NYCDA-Angular-102-Homework
-Homework assignments for the Angular 102 class at NYCDA.
+# NYCDA Angular 102 Homework
+This repository belongs to Jim Lynch. 
+
+It contains all homeworks, workshops, and other code code written by Jim for the Feb - Apr 2016 session of the AngularJS class at New York Code and Design Academy, taught by George Dagher.

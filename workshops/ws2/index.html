@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+
+    <script src="js/services/calculator.service.js"></script>
+    <script src="js/code.js"></script>
+    <script src="js/services/studentInfo.factory.js"></script>
+
+    <link rel="stylesheet" href="css/myCss.css">
+</head>
+
+<body ng-app="MyApp">
+<div ng-controller="MainController as mainCtrl">
+
+    <div>
+        <br>
+        <p>Student:
+
+            <input type="text" ng-model="mainCtrl.studentInfo.name"/>
+        </p>
+        <p>Assignment:
+            <input type="text" ng-model="mainCtrl.studentInfo.assignment"/>
+        </p>
+        <p>
+            <p>Grade:
+        <input type="text" ng-model="mainCtrl.studentInfo.grade" />
+        <span ng-model="mainCtrl.savedUser.email"></span> / 100</p>
+        </p>
+
+        <button ng-click="mainCtrl.onAddButtonClicked()" >Add</button>
+    </div>
+
+    <hr/>
+    <div>
+
+        <div ng-repeat="assignment in mainCtrl.studentInfo.assignments">
+            <p> <div ng-bind="assignment.name"/></p>
+        </div>
+    </div>
+    <hr/>
+    <div class="column">
+        <p>Name: <div ng-bind="mainCtrl.studentInfo.studentName"></div></p>
+        <p>Grade %: <div ng-bind="mainCtrl.studentInfo.numberGrade"></div></p> <br/>
+
+
+      <p> Pass or Fail: <div ng-bind="mainCtrl.studentInfo.passOrFail"></div> </p>
+
+    </div>
+    <div>
+        Grade Letter: <div ng-bind="mainCtrl.studentInfo.letterGrade"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

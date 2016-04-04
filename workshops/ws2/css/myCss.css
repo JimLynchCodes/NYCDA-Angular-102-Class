@@ -1,0 +1,19 @@
+
+.nav {
+    /*display: inline-block;*/
+    width: 50%;
+    background-color: lightblue;
+    float:left;
+}
+.column {
+    /*display: inline;*/
+    width: 50%;
+    background-color: lightgreen;
+    float:left;
+}
+
+
+body {
+    display: inline-block;
+
+}

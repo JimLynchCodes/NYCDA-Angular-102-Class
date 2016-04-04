@@ -1,0 +1,23 @@
+<div layout="vertical" layout-fill>
+
+  <md-content>
+    <header>
+      <acme-navbar creation-date="main.creationDate"></acme-navbar>
+    </header>
+
+    <div ng-repeat = "contact in $ctrl.DataHolder.contactArray" class="someOtherClass">
+      Contact: {{$index}}
+      <span ng-bind='contact.firstName' class="cool-class"></span>
+    </div>
+
+  </md-content>
+
+</div>
+
+<style>
+
+  .someOtherClass {
+    background-color: lightsalmon;
+  }
+
+</style>
